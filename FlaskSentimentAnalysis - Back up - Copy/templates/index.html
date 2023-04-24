@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+
+
+
+
+
+<script>
+  window.addEventListener("load", function() {
+      // Hide the preloader after 2 seconds
+      var preloader = document.querySelector(".preloader");
+      setTimeout(function() {
+          preloader.style.display = "none";
+      }, 2000);
+  });
+
+</script>
+
+
+
+
+
+
+<title>Twitter Search</title>
+</head>
+<body>
+  <div class="preloader">
+    <div class="loader"></div>
+</div>
+    <div class="SentiWord">
+        <h1 class="Sentiment">Sentiment Analysis</h1>
+        <h1 class="Sentiment">Sentiment Analysis</h1>
+    </div>
+   
+    <form method="POST" action="{{ url_for('search') }}">
+
+        <i class="uil uil-search"></i>
+
+        <input type="text" name="query" id="query" placeholder="Please enter a keyword (e.g. #hashtag)"/>
+        <input type="submit" value="Next">
+        <br>
+        {% if submitted %}
+        {% if message %}
+            <div class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>{{ message }}</p>
+                </div>
+            </div>
+        {% endif %}
+    {% endif %}
+
+    </form>
+    
+    <div class="input-description">
+        <h2 class="des">This tool is built with Multinomial Naive Bayes sentiment classifier. 
+          This will collect local tweets related to the input using hashtag. 
+          The collected tweets will be processed and will classify as negative or positive sentiments. 
+            A time-series line graph and word cloud will be seen in the Visualization Result of Sentiment Analysis together with Model Evaluation Result and Sentiment Predictions.</h2>
+      </div>
+
+</body>
+</html>
+
+
+<script> // script for error message
+    // Get the modal
+var modal = document.querySelector(".modal");
+
+// Get the <span> element that closes the modal
+var span = document.querySelector(".close");
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+</script>

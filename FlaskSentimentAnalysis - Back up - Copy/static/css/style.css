@@ -1,0 +1,396 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+ }
+ 
+ body {
+     font-family: Arial, sans-serif;
+     background-image: url('twitt3.jpg');
+     background-size: cover;
+     background-repeat: no-repeat;
+ 
+  
+ }
+ 
+         h2 {
+             font-size: 30px;
+             font-weight: bold;
+             padding-top: 20px;
+             margin-bottom: 20px;
+             text-align: center;
+             color: #ffffff;
+         }
+ 
+ 
+ /*DATA OVERVIEW wholw box STYLE start*/
+ 
+ .rounded-box {
+   height: 90px;
+   border-radius: 10px;
+   padding: 10px;
+   margin-left: 20px;
+   margin-right: 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 20px;
+   background: rgba(180, 182, 189, 0);
+   visibility: visible;
+   opacity: 1;
+   /* Add glowing border */
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+   animation: glowing 3s infinite;
+ }
+ 
+ /* Define animation for glowing effect */
+ @keyframes glowing {
+   0% {
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+   }
+   50% {
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+   }
+   100% {
+     box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+   }
+ }
+ /*DATA OVERVIEW wholw box STYLE end*/
+ 
+ /*DATA OVERVIEW word STYLE start*/
+         .rounded-box p {
+           font-family: "Poppins", sans-serif;
+           color: white;
+           font-weight: bold;
+           font-size: 27px; /* You can adjust the font size to your preference */
+           text-transform: uppercase; /* Optional: Convert text to uppercase for a more professional look */
+         }
+ 
+ /*DATA OVERVIEW word STYLE end*/
+ 
+ 
+ 
+ /*performance metrics each box STYLE start*/
+ 
+ .score-box {
+   background-color: #ffffff;
+   border: 1px solid rgb(0, 0, 0);
+   border-radius: 10px;
+   padding: 10px;
+   text-align: center;
+   margin: auto;
+   width: 15%;
+   font-family: "Poppins", sans-serif;
+   font-size: 1.2rem;
+   color: #333;
+ }
+ /*performance metrics each box STYLE end*/
+ 
+ 
+ /*positive negative total start*/
+ 
+ 
+ .data-box {
+   border-radius: 10px;
+   padding: 10px;
+   width: 200px;
+   text-align: center;
+   margin: auto;
+   transition: background-color 1s ease-in-out, box-shadow 1s ease-in-out;
+ }
+ 
+ .data-box p {
+   font-size: 25px;
+   font-family: "Poppins", sans-serif;
+   color: #e40b0b;
+   margin: auto;
+   font-weight: 600;
+ }
+ 
+ .data-box span {
+   font-size: 14px;
+   font-family: "Poppins", sans-serif;
+   font-weight: bold;
+   color: #000000;
+   margin: auto;
+ }
+ 
+ .data-box.positive {
+   background-color: whitesmoke;
+   border: 1px solid rgb(0, 0, 0);
+   border-radius: 10px;
+ }
+ 
+ .data-box.negative {
+   background-color: whitesmoke;
+   border: 1px solid rgb(0, 0, 0);
+   border-radius: 10px;
+ 
+ }
+ 
+ .data-box.total {
+   background-color: whitesmoke;
+   border: 1px solid rgb(0, 0, 0);
+   border-radius: 10px;
+ 
+ }
+ 
+ 
+ 
+ .data-box:hover {
+   animation: gradientAnimation 1s infinite;
+   box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+ }
+ 
+ @keyframes gradientAnimation {
+   0% {
+     background-position: 0% 50%;
+   }
+   50% {
+     background-position: 100% 50%;
+   }
+   100% {
+     background-position: 0% 50%;
+   }
+ }
+  
+ /*positive negative total end*/
+ 
+ /*word cloud sentiment box start*/
+ 
+ 
+         .images {
+             display: flex;
+             height: 400px;
+   padding-top: 10px;
+      /*word cloud sentiment box end*/
+        
+         }
+         .box-img {
+             border: 1px solid rgb(0, 0, 0);
+             border-radius: 10px;
+             padding: 10px;
+             margin-left: 20px;
+             margin-right: 20px;
+             display: flex;
+             justify-content: space-between;
+             margin-bottom: 20px;
+             background: rgba(180, 182, 189, 0);
+             visibility: visible;
+             opacity: 1;
+             /* Add glowing border */
+             box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+             animation: glowing 3s infinite;
+ 
+ 
+ 
+ 
+ 
+             
+         }
+ 
+ 
+ 
+ /*PERFORMANCE maetrics whole box start*/
+ .rounded-box-score {
+   height: 90px;
+   border-radius: 10px;
+   padding: 10px;
+   margin-left: 20px;
+   margin-right: 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 20px;
+   background: rgba(180, 182, 189, 0);
+   visibility: visible;
+   opacity: 1;
+   /* Add glowing border */
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+   animation: glowing 3s infinite;
+ }
+ 
+ /* Define animation for glowing effect */
+ @keyframes glowing {
+   0% {
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+   }
+   50% {
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+   }
+   100% {
+     box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+   }
+ }
+ 
+ /*PERFORMANCE maetrics whole box end*/
+ 
+ 
+ 
+ /*performance metrics word STYLE start*/
+ 
+ .rounded-box-score i {
+   font-family: "Poppins", sans-serif;
+           color: #ffffff;
+           font-style: normal;
+           font-weight: bold;
+ }
+ /*performance metrics word STYLE end*/
+ 
+ 
+ /*accuracy precision word start*/
+ 
+ .rounded-box-score span {
+   font-size: 14px;
+   font-family: "Poppins", sans-serif;
+   font-weight: bold;
+   color: #000000;
+   margin: auto;
+ }
+ 
+ /*accuracy precision word end*/
+ 
+ 
+ /*accuracy precision word percentage start*/
+ 
+ .rounded-box-score p {
+   font-size: 25px;
+   font-family: "Poppins", sans-serif;
+   color: #e40b0b;
+   margin: auto;
+   font-weight: 600;
+ }
+ 
+ /*accuracy precision word percentage end*/
+ 
+ 
+ /*TWEET DATA TABLE*/
+ table {
+   font-family: Arial, sans-serif;
+   border-collapse: collapse;
+   width: 100%;
+   margin-bottom: 20px;
+   table-layout: fixed;
+   color: #0b0d0f;
+   background-color: white;
+ 
+ }
+ 
+ table td,
+ table th {
+   border: 1px solid #3b3b3b;
+   padding: 8px;
+   text-align: center;
+ }
+ table th {
+   padding-top: 12px;
+   padding-bottom: 12px;
+   text-align: center;
+   background-color: hsl(216, 91%, 87%);
+   color: #050101;
+   position: sticky;
+   top: 0;
+ }
+ 
+.exit{
+  position: fixed;
+  left: 90;
+}
+
+
+.btn-download {
+
+  position: fixed;
+  top: 0;
+
+
+}
+
+ .table-wrapper {
+
+  position: relative;
+  height: 350px; /* set a fixed height */
+  overflow: hidden; /* hide overflow */
+   overflow-y: scroll;
+   border: 1px solid rgb(168, 168, 168);
+   border-radius: 10px;
+   padding-top: .05px;
+   padding-left: 10px;
+   padding-right: 10px;
+   margin-left: 20px;
+   margin-right: 20px;
+   overflow-x: hidden;
+   background: rgba(255, 255, 255, 0.2);
+   visibility: visible;
+   opacity: 2;
+   
+ }
+ /*TABLE COLUMN WIDTH*/
+ 
+ table td:first-child,
+ table th:first-child {
+   width: 20%;
+ }
+ 
+ table td:nth-child(2),
+ table th:nth-child(2) {
+   width: 60%;
+ }
+ 
+ table td:last-child,
+ table th:last-child {
+   width: 20%;
+ }
+ 
+ 
+ 
+ /* Preloader styles */
+ .preloader {
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-image: url('twitt3.jpg'); 
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 9999;
+ }
+ 
+ .preloader::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-image: url('twitt3.jpg'); 
+   background-size: cover;
+   background-repeat: no-repeat;
+   filter: blur(10px); /* Adjust the blur intensity as desired */
+   opacity: 1; /* Adjust the opacity as desired */
+   z-index: -1;
+ }
+ 
+ 
+ 
+ .preloader .loader {
+   width: 60px;
+   height: 60px;
+   border: 5px solid #1da1f2;
+   border-radius: 50%;
+   border-top-color: transparent;
+   animation: loader-anim 1s linear infinite;
+ }
+ 
+ @keyframes loader-anim {
+   to {
+       transform: rotate(360deg);
+   }
+ }

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<script>
+  window.addEventListener("load", function() {
+      // Hide the preloader after 2 seconds
+      var preloader = document.querySelector(".preloader");
+      setTimeout(function() {
+          preloader.style.display = "none";
+      }, 2000);
+  });
+</script>
+
+
+  <title>Twitter Search Results</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head> 
+<body>
+  
+  <div class="preloader">
+</div>
+	
+    <!-- Exit button -->
+    <button class="exit" onclick="location.href='/exit';">Exit</button>
+
+    <h2>MULTINOMIAL NAIVE BAYES-BASED SENTIMENT ANALYSIS TOOL</h2>
+
+    
+        <div class="rounded-box">
+            <p style="font-size: 20px">DATA OVERVIEW</p>
+
+            <div class="data-box positive">
+              <p>{{ num_positive_tweets }}</p>
+              <span>POSITIVE TWEETS</span>
+            </div>
+            <div class="data-box negative">
+              <p>{{ num_negative_tweets }}</p>
+              <span>NEGATIVE TWEETS</span>
+            </div>
+            <div class="data-box total">
+              <p>{{ num_tweets }}</p>
+              <span>TOTAL TWEETS</span>
+            </div>
+            
+                 
+            </div>
+                
+            <div class="rounded-box-score">
+              <i style="font-size: 20px ">PERFORMANCE METRICS</i>
+              <div class="score-box">
+                          <p> {{accuracy}}</p> 
+                          <span>ACCURACY</span></div>
+              <div class="score-box">            
+                          <p>{{precision}}</p> 
+                          <span>PRECISION</span></div>
+              <div class="score-box">
+                          <p> {{recall}}</p> 
+                          <span>RECALL</span></div>
+              <div class="score-box">   
+                          <p> {{f1score}}</p> 
+                          <span>F1-SCORE</span>
+               </div>           
+            </div> 
+
+   
+   <div class="images">
+  <div class="box-img" style="width: 40%;" background-color="none" >     
+    <img src="data:image/png;base64,{{ wc_image_url }}" style="width:100%; height:auto;"alt="Wordcloud">
+  </div> 
+  <div class="box-img"  style="width: 60%;"> 
+    <img src="data:image/png;base64,{{ sentiment_trend_image_url }}" style="width:100%; height:auto;" alt="Sentiment Trend Graph">
+  </div> 
+  </div>
+
+
+    <div class="table-wrapper">
+
+      <form action="{{ url_for('download') }}" method="GET">
+        <input type="hidden" name="data" value="{{ data|e }}">
+        <button type="submit" class="btn-download">
+          <i class="fa fa-download"></i> Download CSV
+        </button>
+      </form>
+    
+      <table>
+        {{ data|safe  }}  
+      </table>
+ 
+
+  </div>
+  
+
+</body>
+</html>
